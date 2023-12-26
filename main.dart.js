@@ -76876,8 +76876,8 @@ $S:44}
 A.ze.prototype={
 a1(){return new A.Sr(B.i)}}
 A.Sr.prototype={
-G(a){var s=$.av1().h(0,"hello")
-A.cG("hello: "+A.k(s==null?"default":s))
+G(a){var s=$.av1()
+A.cG("hello: "+s.j(s))
 return A.axi(B.uy,A.atf(null,B.ff,null),"Flutter Demo")},
 ar(){this.aJ()
 if(this.a.c==null)throw A.c(A.oQ("Tenant path must be defined."))
