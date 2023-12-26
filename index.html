@@ -34,30 +34,23 @@
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    var serviceWorkerVersion = '3770427332';
+    var serviceWorkerVersion = '705963119';
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
 </head>
 <body>
   <script>
+    window.tenantId = 'your-tenant-id';
+    
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
-      var tenantId = 'your_tenant_id';
-
       _flutter.loader.loadEntrypoint({
         serviceWorker: {
           serviceWorkerVersion: serviceWorkerVersion,
         },
         onEntrypointLoaded: function(engineInitializer) {
           engineInitializer.initializeEngine().then(function(appRunner) {
-            if (window.Flutter) {
-              window.Flutter.postMessage({
-                channel: 'tenant_channel',
-                message: tenantId
-              });
-            }
-            
             appRunner.runApp();
           });
         }
